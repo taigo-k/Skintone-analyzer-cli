@@ -1,4 +1,4 @@
-# 🌟 SkinTone Analyzer CLI
+# SkinTone Analyzer CLI
 
 ![GitHub language count](https://img.shields.io/github/languages/count/YOUR_USERNAME/skintone-analyzer-cli)
 ![GitHub top language](https://img.shields.io/github/languages/top/YOUR_USERNAME/skintone-analyzer-cli)
@@ -68,9 +68,10 @@ HSB/HSV色空間における色相 (Hue: $0^\circ \sim 360^\circ$) と明度 (Va
 詳細は [LICENSE](LICENSE) ファイルを参照してください。
 
 
-
+---
 ----- **English Version** -----
-# 🌟 SkinTone Analyzer CLI
+
+# SkinTone Analyzer CLI
 
 ![GitHub language count](https://img.shields.io/github/languages/count/YOUR_USERNAME/skintone-analyzer-cli)
 ![GitHub top language](https://img.shields.io/github/languages/top/YOUR_USERNAME/skintone-analyzer-cli)
