@@ -7,19 +7,21 @@
 
 ---
 
-## 📸 デモンストレーションと実行結果
+## 📸 デモンストレーション
 
 画像からRGB値（219, 175, 149）を抽出し、HSB変換と細分化ロジックを適用したデモ結果です。
-
-### 🖼️ デモ結果画像
 ![ SkinTone Analyzer CLI 実行画面](demo.png)
 
 ---
 
-## 🎯 プロジェクトの目的と主な機能
-一般的な画像の色情報を単なるRGB値として扱うのではなく、パーソナルカラー診断で鍵となる色相（Hue）と明度（Brightness）に基づいて分類することで、美容分野やデザイン分野に応用可能な科学的かつ実用的な色彩分析を提供します。
+## 🧐 開発背景
+このプロジェクトは、主観的な印象に頼りがちであった美容分野のプロセスを、画像解析と色彩科学の力で客観化するという美容とデジタル技術の架け橋になる試みです。
+* **客観的な指標の確立**: 肌の色を単なるRGB値（赤、緑、青）として扱うのではなく、HSB（色相、彩度、明度）色空間に変換することで、人間の知覚に近く、パーソナルカラー診断のコアロジックである「イエローベース（イエベ）」と「ブルーベース（ブルベ）」の判定に不可欠な色相（Hue）を客観的に数値化します。
+* **科学的根拠に基づく細分化**: 単にイエベ・ブルベを判定するだけでなく、明度（Brightness）と彩度（Saturation）に明確な閾値を設けることで、春、夏、秋、冬という四季のトーン分類をロジックに基づいて実行します。
 
-### 📊 機能一覧
+---
+
+## 📊 機能一覧
 * 平均RGB抽出: Pillow を使用し、画像データ全体から代表的な平均RGB値を正確に計算します。
 * HSB変換アルゴリズム: RGB値を HSB/HSV色空間に変換し、イエベ・ブルベ判定のコアとなる**色相（H）**を抽出します。
 * 四季トーン分類: 色相に加え、彩度（S）と明度（V）の閾値判定を組み合わせ、春、夏、秋、冬 の四季に細分化します。
@@ -77,20 +79,22 @@ HSB/HSV色空間における色相 (Hue: $0^\circ \sim 360^\circ$) と明度 (Va
 
 ---
 
-## 📸 Demonstration and Results
+## 📸 Demonstration
 
 This demonstration shows the result after extracting the RGB value (219, 175, 149), performing HSB conversion, and applying the detailed classification logic.
-
-### 🖼️ Demo Result Image
 ![SkinTone Analyzer CLI Execution Screenshot](demo.png)
 
 ---
 
-## 🎯 Project Goal and Key Features
+## 🧐 Development Background
+This project serves as a bridge between the beauty industry and digital technology by using image analysis and color science to objectify processes that have traditionally relied on subjective impressions.
 
-The primary goal of this project is to provide **scientific and practical color analysis** applicable to beauty and design fields. Instead of treating image color data as simple RGB values, the tool classifies them based on **Hue and Brightness**, which are key factors in personal color diagnostics.
+* **Establishing Objective Metrics**: Instead of treating skin color merely as RGB values (Red, Green, Blue), we convert it to the HSB (Hue, Saturation, Brightness) color space. This conversion objectively quantifies Hue, which is indispensable for determining the core logic of personal color diagnosis—Yellow Base (Warm) and Blue Base (Cool)—since it closely aligns with human color perception.
+* **Scientific Subdivision**: Beyond simply determining Warm or Cool tones, the tool applies clear thresholds for Brightness (Value) and Saturation to execute the four-season tone classification (Spring, Summer, Autumn, Winter) based on concrete logic.
 
-### 📊 Feature List
+---
+
+## 📊 Feature List
 * **Average RGB Extraction**: Uses the Pillow library to accurately calculate the representative average RGB value from the image data.
 * **HSB Conversion Algorithm**: Converts RGB values into the HSB/HSV color space to extract the **Hue (H)**, the core element for Warm/Cool tone determination.
 * **Seasonal Tone Classification**: Combines Hue, Saturation (S), and Brightness (V) thresholds to classify tones into **Spring, Summer, Autumn, and Winter**.
